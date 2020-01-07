@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ItemController {
 
-    @Autowired
-    private ItemService itemService;
+    /*@Autowired
+    private ItemService itemService;*/
 
     @RequestMapping("/todo")
     public String toDoList(ModelMap map){

@@ -11,8 +11,8 @@ import java.security.Key;
 @RestController
 public class LoginController {
 
-    @Autowired
-    private UserService userService;
+    /*@Autowired
+    private UserService userService;*/
 
     public String login(){
 
