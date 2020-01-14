@@ -2,7 +2,7 @@ spring:
   datasource:
     #数据源的基本配置
     username: root
-    password: 'root'
+    password: root
     url: jdbc:mysql://localhost:3306/todolist?serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
