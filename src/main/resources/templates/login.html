@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/css/login.css}" rel="stylesheet"/>
+    <!--<script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>-->
+    <style type="text/css">
+        .st01 {
+            fill: #fff;
+        }
+        .st0 {
+            fill: none;
+        }
+        .st1 {
+            fill: #010101;
+        }
+    </style>
+</head>
+<body>
+<div class="session">
+    <div class="left">
+    </div>
+    <form th:action="@{/login}" class="log-in" autocomplete="off" method="post">
+        <h4>Welcome</h4>
+        <p>Log in to your account to view today's TODO:</p>
+        <div class="floating-label">
+            <input placeholder="Username" type="text" name="username" id="username" autocomplete="off">
+            <label for="username">用户名:</label>
+        </div>
+        <div class="floating-label">
+            <input placeholder="Password" type="password" name="password" id="password" autocomplete="off">
+            <label for="password">密码:</label>
+
+        </div>
+        <button type="submit" >登录</button>
+        <a href="" class="discrete" >注册</a>
+    </form>
+</div>
+</body>
+</html>

@@ -4,20 +4,30 @@ import com.dean.todolist.service.UserService;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Key;
 
-@RestController
+@Controller
 public class LoginController {
 
     /*@Autowired
     private UserService userService;*/
 
-    public String login(){
+    @RequestMapping("/")
+    public String welcome(){
+        return "login";
+    }
 
-        Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    @RequestMapping("/login")
+    public String login(@RequestParam("username") String username,
+                        @RequestParam("password") String password){
 
-        return "";
+        System.out.println(username+"-"+password);
+        return "index";
     }
 }
