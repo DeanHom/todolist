@@ -9,15 +9,27 @@ import java.util.Date;
 @Setter
 public class ItemEntity extends BaseEntity{
 
-    private String itemName;
+    private String itemName;//事项名称
 
-    private String itemContent;
+    private String itemContent;// 事项内容
 
-    private Integer level;
+    private Integer level;// 级别
 
-    private Date deadLine;
+    private Date deadLine;// 截至时间
 
-    private Long parentId;
+    private Long parentId;// 所属项目id
 
-    private Long userId;
+    private Long userId;// 用户id
+
+    @Override
+    public String toString() {
+        return "ItemEntity{" +
+                "itemName='" + itemName + '\'' +
+                ", itemContent='" + itemContent + '\'' +
+                ", level=" + level +
+                ", deadLine=" + deadLine +
+                ", parentId=" + parentId +
+                ", userId=" + userId +
+                '}';
+    }
 }

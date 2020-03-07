@@ -17,7 +17,7 @@ public class ItemController {
     private ItemService itemService;*/
 
     @RequestMapping("/todo")
-    public String toDoList(Map<String, Object> map){
+    public String toDoList(Map<String, Object> map, ModelMap modelMap){
 
         map.put("key", "hello");
         return "mainIndex";

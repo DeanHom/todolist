@@ -17,8 +17,32 @@ graph TB
 ## 表结构设计
 
 ```sql
-create database if not exists todolist；
+create database if not exists todolist;
 ```
+
+### 项目表
+
+字段名：id，program_name，program_content，create_time，update_time，status，user_id，num
+
+字段描述：id，项目名称，项目内容，创建时间，更新时间，状态，用户id，序号
+
+sql：
+
+```sql
+create table if not exists todolist.program (
+	id bigint(20) not null auto_increment,
+    program_name varchar(255) not null,
+    program_content text not null,
+    create_time datetime,
+    update_time datetime,
+    status int(1) not null,
+    user_id bigint(20) not null,
+    num int(10),
+    primary key (id))
+engine=InnoDB default charset=utf8;
+```
+
+
 
 ### 用户表
 

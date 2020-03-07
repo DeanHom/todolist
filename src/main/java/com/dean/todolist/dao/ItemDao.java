@@ -6,19 +6,17 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
-@Mapper
+//@Mapper
 public interface ItemDao {
 
-    List<ItemEntity> findItemByUserId(Long userId);
-
-    @Select("select * from item where id = #{id}")
-    ItemEntity findItemById(Long id);
+    List<ItemEntity> findItem(ItemEntity itemEntity);
 
     void saveItem(ItemEntity itemEntity);
 
     void updateItem(ItemEntity itemEntity);
 
-    @Delete("delete from item where id = #{id}")
     void deleteItemById(Long id);
+
+    void destroyItemById(Long id);
 
 }

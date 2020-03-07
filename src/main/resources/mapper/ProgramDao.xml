@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dean.todolist.dao.ProgramDao">
+
+	<select id="findProgram" parameterType="com.dean.todolist.entity.ProgramEntity" resultType="com.dean.todolist.entity.ProgramEntity">
+		select * from program
+	</select>
+
+	<select id="findProgramById" resultType="com.dean.todolist.entity.ProgramEntity">
+		select * from program where id = #{id}
+	</select>
+
+</mapper>

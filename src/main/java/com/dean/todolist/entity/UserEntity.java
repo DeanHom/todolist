@@ -10,4 +10,5 @@ public class UserEntity extends BaseEntity{
     private String userName;
 
     private String password;
+
 }
